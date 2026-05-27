@@ -1,6 +1,6 @@
 # GOmatrix
 
-A modern rewrite of [cmatrix](https://github.com/abishekvashok/cmatrix) in Go — the classic "Matrix" falling-code screensaver for the terminal.
+A 1:1 clone of [cmatrix](https://github.com/abishekvashok/cmatrix) in Go — the classic "Matrix" falling-code screensaver for your terminal.
 
 ## Build
 
@@ -16,7 +16,43 @@ make
 ./cmatrix
 ```
 
-Press any key to quit.
+Press `q` to quit.
+
+### Command-line flags
+
+| Flag | Description |
+|------|-------------|
+| `-a` | Asynchronous scroll |
+| `-b` | Bold characters on |
+| `-B` | All bold characters (overrides `-b`) |
+| `-c` | Use Japanese characters |
+| `-n` | No bold (overrides `-b` and `-B`) |
+| `-o` | Old-style scrolling |
+| `-s` | Screensaver mode (exit on any key) |
+| `-r` | Rainbow mode |
+| `-m` | Lambda mode |
+| `-k` | Characters change while scrolling |
+| `-L` | Lock mode |
+| `-M <msg>` | Display message in center |
+| `-u <0-10>` | Screen update delay (default: 4) |
+| `-C <color>` | Matrix color (default: green) |
+| `-h` | Print help |
+| `-V` | Print version |
+
+### Runtime controls
+
+| Key | Action |
+|-----|--------|
+| `q` | Quit |
+| `p` | Toggle pause |
+| `a` | Toggle async scroll |
+| `b` | Bold on |
+| `B` | All bold |
+| `n` | No bold |
+| `r` | Toggle rainbow |
+| `m` | Toggle lambda |
+| `0-9` | Set speed |
+| <code>!@#$%^&</code> | Set color (red, green, yellow, blue, magenta, cyan, white) |
 
 ## Dependencies
 
