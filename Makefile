@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2026 <Your Name>
+# SPDX-FileCopyrightText: 2026 Reuben Percival
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 .PHONY: all build run clean

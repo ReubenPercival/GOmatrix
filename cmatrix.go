@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2026 <Your Name>
+// SPDX-FileCopyrightText: 2026 Reuben Percival
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 package main
@@ -32,13 +32,14 @@ func closeTermbox() {
 }
 
 func randomChar() rune {
-    // Cmatrix uses a mix of ASCII and Katakana. Here we use a simple range.
-    return rune(0x30A0 + rand.Intn(96)) // Katakana block
+	if rand.Intn(2) == 0 {
+		return rune(33 + rand.Intn(94)) // ASCII printable
+	}
+	return rune(0x30A0 + rand.Intn(96)) // Katakana
 }
 
 func main() {
-    rand.Seed(time.Now().UnixNano())
-    if err := initTermbox(); err != nil { panic(err) }
+	if err := initTermbox(); err != nil { panic(err) }
     defer closeTermbox()
 
     // initial size and columns
